@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<main>
+
+
+<div>
+  
+        <div>
+              <h3> <%=resultsid.namechar %></h3>
+              <p> <%=resultsid.qoute %></p>
+              <img src=" <%=resultsid.imagechar %>" alt="">
+
+            
+              <form action="/character/<%=resultsid.id%>?_method=delete" method="post">
+            <input type="hidden" name="id" value="<%=resultsid.id %>">
+            <input type="submit" value=" Delete">
+            </form>
+
+            <form action="/character/<%=resultsid.id%>?_method=put" method="post">
+                <input type="text" name="character" value="<%=resultsid.character %>">
+                <input type="text" name="quote" value="<%=resultsid.quote %>">
+                <input type="text" name="image" value="<%=resultsid.image %>">
+             
+                <input type="submit" value="update">
+                </form>
+        
+        </div>
+    
+     
+</div>
+
+
+
+
+</main>
+  
+</body>
+</html>

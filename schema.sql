@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS ;
+DROP TABLE IF EXISTS simpsons;
 
 CREATE TABLE
 simpsons(

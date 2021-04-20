@@ -61,6 +61,16 @@ function rendermyfavorite(req,res){
       res.render('favorites',{results:result.rows} );
     })
 }
+app.get('/character/:id',getcharacter)
+
+function getcharacter (req,res){
+    const id =[req.params.id];
+    const sql = `SELECT * FROM simpsons where id=$1`;
+    client.query(sql,id).then(result=>{
+      res.render('favorites',{resultsid:result.rows[0]} );
+    })
+}
+app.get('/character/:id',getcharacter)
 // callback functions
 // -- WRITE YOUR CALLBACK FUNCTIONS FOR THE ROUTES HERE --
 
